@@ -12,16 +12,6 @@ fn first_word(s: &str) -> &str {
     &s[..]
 }
 
-enum IpAddrKind{
-    V4,
-    V6,
-}
-
-struct IpAddr{
-    kind: IpAddrKind,
-    address: String,
-}  
-
 fn main() {
     let mut s: String = String::from("hello world");
     let hello = &s[0..5];
@@ -29,15 +19,5 @@ fn main() {
     let len: usize = caclulate_length(&mut s);
     println!("The string: {} and the length is: {}", s, len);
     let len = first_word(&s);
-    let four = IpAddrKind::V4;
-    let six =IpAddrKind::V6;
-    let localhost = IpAddr{
-        kind: IpAddrKind::V4,
-        address = String::from("127.0.0.1");
-
-    }
-
-
     println!("{}", len);
 }
-
